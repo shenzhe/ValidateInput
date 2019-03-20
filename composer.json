@@ -1,0 +1,22 @@
+{
+  "name": "shenzhe/validate",
+  "description": "input validate",
+  "keywords": [
+    "input",
+    "validate"
+  ],
+  "authors": [
+    {
+      "name": "shenzhe",
+      "email": "shenzhe163@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ValidateInput\\": "src"
+    }
+  },
+  "require": {
+    "php": ">=7.2"
+  }
+}
