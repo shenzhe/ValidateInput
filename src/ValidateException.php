@@ -8,8 +8,21 @@ use Throwable;
 
 class ValidateException extends \RuntimeException
 {
-    public function __construct($message = "", $code = 101001, Throwable $previous = null)
+    public function __construct($message = "", $code = -1, Throwable $previous = null)
     {
-        parent::__construct($message, $code, $previous);
+        if (is_array($message)) {
+            if (!empty($message['code'])) {
+                $code = $message['code'];
+            }
+
+            if (!empty($message['msg'])) {
+                $msg = $message['msg'];
+            } else {
+                $msg = '系统错误';
+            }
+        } else {
+            $msg = $message;
+        }
+        parent::__construct($msg, $code, $previous);
     }
 }

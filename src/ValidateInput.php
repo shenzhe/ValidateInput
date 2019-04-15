@@ -25,7 +25,7 @@ class ValidateInput
      * @return mixed
      * @throws ValidateException
      */
-    public static function vaild($str, $type, $errmsg = '')
+    public static function vaild($str, $type, $errmsg)
     {
         switch (substr($type, 0, 1)) {
             case 'r':
